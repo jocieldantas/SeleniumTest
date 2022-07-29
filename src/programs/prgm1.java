@@ -66,7 +66,7 @@ public class prgm1 {
 
 		// Navigate to web page
 		driver.get("http://sampleapp.tricentis.com/101/app.php");
-		new WebDriverWait(driver, Duration.ofSeconds(3));
+		new WebDriverWait(driver, Duration.ofSeconds(20));
 
 		// Maximizing window
 		driver.manage().window().maximize();
@@ -212,6 +212,8 @@ public class prgm1 {
 	    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(ss, null);
 	    button = driver.findElement(By.xpath("//button[@id='open']"));
 		button.click();
+		// Wait 1.5 Seconds
+	    Thread.sleep(5000);
 	    //imitate mouse events like ENTER, CTRL+C, CTRL+V
 	    Robot robot = new Robot();
 	    //robot.delay(250);
